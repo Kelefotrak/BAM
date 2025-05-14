@@ -18,7 +18,7 @@ export default function BearArmsMilitia() {
     setFormStatus("Sending...");
 
     try {
-      const response = await fetch("/api/contact", {
+      const response = await fetch("https://formsubmit.co/beararmsmilitiaco@gmail.com", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
@@ -119,7 +119,7 @@ export default function BearArmsMilitia() {
             <div className="space-y-4">
               <div className="bg-black p-4 rounded shadow border border-yellow-500">
                 <h3 className="font-semibold text-lg text-yellow-500">What is Bear Arms Militia?</h3>
-                <p className="text-yellow-300>Something the big Mexican asked me to while pointing a gun to my head.</p>
+                <p className="text-yellow-300">We are a brand dedicated to providing premium merchandise and exclusive content.</p>
               </div>
               <div className="bg-black p-4 rounded shadow border border-yellow-500">
                 <h3 className="font-semibold text-lg text-yellow-500">How can I track my order?</h3>
