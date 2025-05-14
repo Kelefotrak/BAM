@@ -3,77 +3,84 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Bear Arms Militia - Premium merchandise, exclusive art, and more.">
   <title>Bear Arms Militia</title>
   <link rel="stylesheet" href="styles.css">
   <script defer src="script.js"></script>
 </head>
-<body class="bg-black text-yellow-500">
+<body>
   <!-- Header -->
-  <header class="bg-black p-4 shadow-lg sticky top-0 z-50">
-    <div class="container">
-      <h1 class="text-2xl font-bold">Bear Arms Militia</h1>
-      <nav>
-        <a href="#shop" class="hover:text-yellow-300">Shop</a>
-        <a href="#contact" class="hover:text-yellow-300">Contact</a>
-        <a href="#faq" class="hover:text-yellow-300">FAQ</a>
+  <header class="bg-black p-4 shadow-lg sticky top-0 z-50" aria-label="Website Header">
+    <div class="container flex justify-between items-center">
+      <h1 class="text-2xl font-bold" aria-label="Bear Arms Militia Logo">Bear Arms Militia</h1>
+      <nav class="nav-links" role="navigation" aria-label="Main Navigation">
+        <a href="#shop" class="hover-link" aria-label="Go to shop section">Shop</a>
+        <a href="#contact" class="hover-link" aria-label="Go to contact section">Contact</a>
+        <a href="#faq" class="hover-link" aria-label="Go to FAQ section">FAQ</a>
       </nav>
     </div>
   </header>
 
-  <!-- Home Section -->
+  <!-- Hero Section -->
   <section id="home" class="hero-section">
     <div class="hero-content">
-      <h2>Welcome to Bear Arms Militia</h2>
+      <h2 class="hero-title">Welcome to Bear Arms Militia</h2>
       <p>Discover premium merchandise, exclusive art, and more.</p>
-      <a href="#shop" class="cta-button">Shop Now</a>
+      <a href="#shop" class="cta-button" aria-label="Go to shop now">Shop Now</a>
     </div>
   </section>
 
   <!-- Shop Section -->
-  <section id="shop">
-    <h2>Shop</h2>
+  <section id="shop" class="section">
+    <h2 class="section-title">Shop</h2>
     <div class="product-grid">
       <div class="product-card">
-        <img src="assets/product-1.jpg" alt="Product 1">
-        <h3>Product Name</h3>
-        <p>$99.99</p>
-        <button>Add to Cart</button>
+        <img src="assets/product-1.jpg" alt="Premium T-shirt" class="product-image">
+        <h3 class="text-lg font-semibold">Premium T-shirt</h3>
+        <p class="text-yellow-300">$99.99</p>
+        <button class="action-button" aria-label="Add Premium T-shirt to cart">Add to Cart</button>
       </div>
       <div class="product-card">
-        <img src="assets/product-2.jpg" alt="Product 2">
-        <h3>Product Name</h3>
-        <p>$99.99</p>
-        <button>Add to Cart</button>
+        <img src="assets/product-2.jpg" alt="Militia Hat" class="product-image">
+        <h3 class="text-lg font-semibold">Militia Hat</h3>
+        <p class="text-yellow-300">$49.99</p>
+        <button class="action-button" aria-label="Add Militia Hat to cart">Add to Cart</button>
       </div>
       <div class="product-card">
-        <img src="assets/product-3.jpg" alt="Product 3">
-        <h3>Product Name</h3>
-        <p>$99.99</p>
-        <button>Add to Cart</button>
+        <img src="assets/product-3.jpg" alt="Emblem Patch" class="product-image">
+        <h3 class="text-lg font-semibold">Emblem Patch</h3>
+        <p class="text-yellow-300">$29.99</p>
+        <button class="action-button" aria-label="Add Emblem Patch to cart">Add to Cart</button>
       </div>
     </div>
   </section>
 
   <!-- Contact Section -->
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <form action="https://formsubmit.co/beararmsmilitiaco@gmail.com" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" placeholder="Your Message" required></textarea>
-      <button type="submit">Send</button>
+  <section id="contact" class="section">
+    <h2 class="section-title">Contact Us</h2>
+    <form action="https://formsubmit.co/beararmsmilitiaco@gmail.com" method="POST" class="contact-form" aria-labelledby="contact-form">
+      <label for="name" class="sr-only">Your Name</label>
+      <input type="text" name="name" id="name" placeholder="Your Name" class="form-input" required>
+      
+      <label for="email" class="sr-only">Your Email</label>
+      <input type="email" name="email" id="email" placeholder="Your Email" class="form-input" required>
+      
+      <label for="message" class="sr-only">Your Message</label>
+      <textarea name="message" id="message" placeholder="Your Message" class="form-input" rows="4" required></textarea>
+      
+      <button type="submit" class="action-button" aria-label="Send message">Send</button>
     </form>
   </section>
 
   <!-- FAQ Section -->
-  <section id="faq">
-    <h2>FAQ</h2>
+  <section id="faq" class="section">
+    <h2 class="section-title">FAQ</h2>
     <div class="faq-item">
-      <h3>What is Bear Arms Militia?</h3>
+      <h3 class="font-semibold">What is Bear Arms Militia?</h3>
       <p>We are a brand dedicated to providing premium merchandise and exclusive content.</p>
     </div>
     <div class="faq-item">
-      <h3>How can I track my order?</h3>
+      <h3 class="font-semibold">How can I track my order?</h3>
       <p>You will receive a tracking link via email after your order is shipped.</p>
     </div>
   </section>
@@ -81,13 +88,13 @@
   <!-- Footer -->
   <footer>
     <p>&copy; 2025 Bear Arms Militia. All rights reserved.</p>
-    <div class="social-links">
-      <a href="https://www.instagram.com/beararmsmilitia/" target="_blank">Instagram</a>
-      <a href="https://www.tiktok.com/@bear.arms.militia" target="_blank">TikTok</a>
-      <a href="https://www.youtube.com/@BArmsMilitia" target="_blank">YouTube</a>
-      <a href="https://www.patreon.com/BearArmsMilitia" target="_blank">Patreon</a>
-      <a href="https://x.com/BArmsMilitia" target="_blank">Twitter</a>
-    </div>
+    <nav class="social-links" role="navigation" aria-label="Social Media Links">
+      <a href="https://www.instagram.com/beararmsmilitia/" target="_blank" class="hover-link" aria-label="Bear Arms Militia Instagram">Instagram</a>
+      <a href="https://www.tiktok.com/@bear.arms.militia" target="_blank" class="hover-link" aria-label="Bear Arms Militia TikTok">TikTok</a>
+      <a href="https://www.youtube.com/@BArmsMilitia" target="_blank" class="hover-link" aria-label="Bear Arms Militia YouTube">YouTube</a>
+      <a href="https://www.patreon.com/BearArmsMilitia" target="_blank" class="hover-link" aria-label="Bear Arms Militia Patreon">Patreon</a>
+      <a href="https://x.com/BArmsMilitia" target="_blank" class="hover-link" aria-label="Bear Arms Militia Twitter">Twitter</a>
+    </nav>
   </footer>
 </body>
 </html>
