@@ -201,7 +201,72 @@
       </div>
     </div>
   </section>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Bear Arms Militia - Premium merchandise, exclusive art, and more.">
+  <title>Bear Arms Militia</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="shop.js"></script>
+</head>
+<body>
+  <!-- Header -->
+  <header class="bg-black p-4 shadow-lg sticky top-0 z-50" aria-label="Website Header">
+    <div class="container flex justify-between items-center">
+      <h1 class="text-2xl font-bold" aria-label="Bear Arms Militia Logo">Bear Arms Militia</h1>
+      <nav class="nav-links" role="navigation" aria-label="Main Navigation">
+        <a href="#shop" class="hover-link" aria-label="Go to shop section">Shop</a>
+        <a href="#contact" class="hover-link" aria-label="Go to contact section">Contact</a>
+        <a href="#faq" class="hover-link" aria-label="Go to FAQ section">FAQ</a>
+      </nav>
+    </div>
+  </header>
 
+  <!-- Hero Section -->
+  <section id="home" class="hero-section">
+    <div class="hero-content">
+      <h2 class="hero-title">Welcome to Bear Arms Militia</h2>
+      <p>Discover premium merchandise, exclusive art, and more.</p>
+      <a href="#shop" class="cta-button" aria-label="Go to shop now">Shop Now</a>
+    </div>
+  </section>
+
+  <!-- Shop Section -->
+  <section id="shop" class="section">
+    <h2 class="section-title">Shop</h2>
+    <div class="product-grid">
+      <!-- Products -->
+      <div class="product-card" data-id="1">
+        <img src="assets/product-1.jpg" alt="Premium T-shirt" class="product-image">
+        <h3 class="text-lg font-semibold">Premium T-shirt</h3>
+        <p class="text-yellow-300">$99.99</p>
+        <button class="action-button add-to-cart" aria-label="Add Premium T-shirt to cart">Add to Cart</button>
+      </div>
+      <div class="product-card" data-id="2">
+        <img src="assets/product-2.jpg" alt="Militia Hat" class="product-image">
+        <h3 class="text-lg font-semibold">Militia Hat</h3>
+        <p class="text-yellow-300">$49.99</p>
+        <button class="action-button add-to-cart" aria-label="Add Militia Hat to cart">Add to Cart</button>
+      </div>
+      <div class="product-card" data-id="3">
+        <img src="assets/product-3.jpg" alt="Emblem Patch" class="product-image">
+        <h3 class="text-lg font-semibold">Emblem Patch</h3>
+        <p class="text-yellow-300">$29.99</p>
+        <button class="action-button add-to-cart" aria-label="Add Emblem Patch to cart">Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cart Section -->
+  <section id="cart" class="section">
+    <h2 class="section-title">Your Cart</h2>
+    <div class="cart-items"></div>
+    <p class="total-price">Total: $0.00</p>
+    <button id="checkout-button" class="action-button">Checkout</button>
+  </section>
+  
   <!-- Contact Section -->
   <section id="contact" class="section">
     <h2 class="section-title">Contact Us</h2>
