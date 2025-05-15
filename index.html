@@ -1,55 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #000000;
-            color: #FFD700;
-        }
-        header {
-            background: linear-gradient(90deg, #000000, #FFD700);
-            color: #FFD700;
-            padding: 1em 0;
-            text-align: center;
-            box-shadow: 0 4px 8px rgba(255, 215, 0, 0.5);
-        }
-        main {
-            padding: 2em;
-            background-color: #111111;
-            border: 2px solid #FFD700;
-            border-radius: 8px;
-            margin: 2em;
-            box-shadow: 0 4px 8px rgba(255, 215, 0, 0.5);
-        }
-        footer {
-            background: #000000;
-            color: #FFD700;
-            text-align: center;
-            padding: 1em 0;
-            border-top: 2px solid #FFD700;
-            position: relative;
-            bottom: 0;
-            width: 100%;
-        }
-        a {
-            color: #FFD700;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Bear Arms Militia - Premium merchandise, exclusive art, and more.">
+  <title>Bear Arms Militia</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+  <style>
+    /* Global Styles */
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #000000;
+      color: #FFD700;
+    }
+    a {
+      color: #FFD700;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    a:hover {
+      color: #FFA500;
+    }
+    header {
+      background: linear-gradient(90deg, #000000, #333333);
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .nav-links a {
+      margin-left: 1.5rem;
+      font-weight: 500;
+      transition: opacity 0.3s;
+    }
+    .nav-links a:hover {
+      opacity: 0.8;
+    }
+    .hero-section {
+      text-align: center;
+      padding: 6rem 2rem;
+      background: url('assets/hero-bg.jpg') no-repeat center/cover;
+      color: #FFD700;
+    }
+    .hero-title {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    }
+    .cta-button {
+      background-color: #FFD700;
+      color: #000;
+      padding: 0.8rem 1.5rem;
+      border-radius: 5px;
+      font-weight: 700;
+      transition: transform 0.3s;
+    }
+    .cta-button:hover {
+      transform: scale(1.05);
+    }
+    .section {
+      padding: 4rem 2rem;
+      background-color: #111111;
+      margin: 2rem auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(255, 215, 0, 0.2);
+    }
+    .section-title {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      color: #FFD700;
+    }
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      padding: 0 2rem;
+    }
+    .product-card {
+      background-color: #222222;
+      border: 2px solid #FFD700;
+      border-radius: 8px;
+      overflow: hidden;
+      text-align: center;
+      padding: 1rem;
+      transition: transform 0.3s;
+    }
+    .product-card:hover {
+      transform: translateY(-10px);
+    }
+    .product-image {
+      max-width: 100%;
+      height: auto;
+      border-bottom: 2px solid #FFD700;
+    }
+    .action-button {
+      background-color: #FFD700;
+      color: #000;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      font-weight: 500;
+      transition: background-color 0.3s;
+    }
+    .action-button:hover {
+      background-color: #FFA500;
+    }
+    .contact-form {
+      max-width: 600px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+    }
+    .form-input {
+      padding: 0.8rem;
+      margin-bottom: 1rem;
+      border: 1px solid #FFD700;
+      border-radius: 4px;
+      background-color: #222222;
+      color: #FFD700;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      background-color: #000000;
+      color: #FFD700;
+    }
+    .social-links a {
+      margin: 0 1rem;
+      font-size: 1rem;
+      display: inline-block;
+    }
+    @media (max-width: 768px) {
+      .hero-title {
+        font-size: 2rem;
+      }
+      .nav-links a {
+        margin-left: 1rem;
+      }
+      .cta-button {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
 </head>
 <body>
   <!-- Header -->
   <header class="bg-black p-4 shadow-lg sticky top-0 z-50" aria-label="Website Header">
-    <div class="container flex justify-between items-center">
+    <div class="container">
       <h1 class="text-2xl font-bold" aria-label="Bear Arms Militia Logo">Bear Arms Militia</h1>
       <nav class="nav-links" role="navigation" aria-label="Main Navigation">
         <a href="#shop" class="hover-link" aria-label="Go to shop section">Shop</a>
@@ -96,7 +205,7 @@
   <!-- Contact Section -->
   <section id="contact" class="section">
     <h2 class="section-title">Contact Us</h2>
-    <form action="https://formsubmit.co/beararmsmilitiaco@gmail.com" method="POST" class="contact-form" aria-labelledby="contact-form">
+    <form action="https://formsubmit.co/beararmsmilitiaco@gmail.com" method="POST" class="contact-form">
       <label for="name" class="sr-only">Your Name</label>
       <input type="text" name="name" id="name" placeholder="Your Name" class="form-input" required>
       
@@ -110,30 +219,16 @@
     </form>
   </section>
 
-  <!-- FAQ Section -->
-  <section id="faq" class="section">
-    <h2 class="section-title">FAQ</h2>
-    <div class="faq-item">
-      <h3 class="font-semibold">What is Bear Arms Militia?</h3>
-      <p>We are a brand dedicated to providing premium merchandise and exclusive content.</p>
-    </div>
-    <div class="faq-item">
-      <h3 class="font-semibold">How can I track my order?</h3>
-      <p>You will receive a tracking link via email after your order is shipped.</p>
-    </div>
-  </section>
-
   <!-- Footer -->
   <footer>
     <p>&copy; 2025 Bear Arms Militia. All rights reserved.</p>
     <nav class="social-links" role="navigation" aria-label="Social Media Links">
-      <a href="https://www.instagram.com/beararmsmilitia/" target="_blank" class="hover-link" aria-label="Bear Arms Militia Instagram">Instagram</a>
-      <a href="https://www.tiktok.com/@bear.arms.militia" target="_blank" class="hover-link" aria-label="Bear Arms Militia TikTok">TikTok</a>
-      <a href="https://www.youtube.com/@BArmsMilitia" target="_blank" class="hover-link" aria-label="Bear Arms Militia YouTube">YouTube</a>
-      <a href="https://www.patreon.com/BearArmsMilitia" target="_blank" class="hover-link" aria-label="Bear Arms Militia Patreon">Patreon</a>
-      <a href="https://x.com/BArmsMilitia" target="_blank" class="hover-link" aria-label="Bear Arms Militia Twitter">Twitter</a>
+      <a href="https://www.instagram.com/beararmsmilitia/" target="_blank" aria-label="Bear Arms Militia Instagram">Instagram</a>
+      <a href="https://www.tiktok.com/@bear.arms.militia" target="_blank" aria-label="Bear Arms Militia TikTok">TikTok</a>
+      <a href="https://www.youtube.com/@BArmsMilitia" target="_blank" aria-label="Bear Arms Militia YouTube">YouTube</a>
+      <a href="https://www.patreon.com/BearArmsMilitia" target="_blank" aria-label="Bear Arms Militia Patreon">Patreon</a>
+      <a href="https://x.com/BArmsMilitia" target="_blank" aria-label="Bear Arms Militia Twitter">Twitter</a>
     </nav>
   </footer>
 </body>
 </html>
-
